@@ -71,7 +71,7 @@ heavyModularFrame = Material("Heavy Modular Frame",
 versatileFramework = Material("Versatile Framework", {modularFrame: 0.5, steelBeam: 6})
 modularEngine = Material("Modular Engine", {motor: 2, rubber: 15, smartPlating: 2})
 adaptiveControlUnit = Material("Adaptive Control Unit",
-                               {automatedWiring: 7.5, smartPlating: 5, heavyModularFrame: 1, computer: 1})
+                               {automatedWiring: 7.5, circuitBoard: 5, heavyModularFrame: 1, computer: 1})
 material_dict = {
     "Iron Ore": ironOre,
     "Copper Ore": copperOre,
