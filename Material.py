@@ -49,17 +49,18 @@ ironPlate = Material("Iron Plate", {ironIngot: 1.5})
 steelIngot = Material("Steel Ingot", {ironIngot: 0.666, coal: 0.666})
 ironRod = Material("Iron Rod", {steelIngot: 0.25})
 wire = Material("Wire", {cateriumIngot: 0.033, copperIngot: 0.133})
+quickwire = Material("Quickwire", {cateriumIngot: 0.2})
 steelBeam = Material("Steel Beam", {steelIngot: 4})
 screw = Material("Screw", {steelBeam: 0.019})
-reinforcedIronPlate = Material("Reinforced Iron Plate", {ironPlate: 3, screw: 16.666})
+reinforcedIronPlate = Material("Reinforced Iron Plate", {ironPlate: 6, screw: 16.666})
 copperSheet = Material("Copper Sheet", {copperIngot: 2})
-plastic = Material("Plastic", {oil: 0.666})
-rubber = Material("Rubber", {oil: 0.666})
+plastic = Material("Plastic", {oil: 1.5})
+rubber = Material("Rubber", {oil: 1.5})
 cable = Material("Cable", {wire: 0.45, rubber: 0.3})
 steelPipe = Material("Steel Pipe", {steelIngot: 1.5})
 rotor = Material("Rotor", {ironRod: 5, screw: 25})
 encasedIndustrialBeam = Material("Encased Industrial Beam", {steelBeam: 4, concrete: 5})
-stator = Material("Stator", {steelPipe: 3, wire: 8})
+stator = Material("Stator", {steelPipe: 2, quickwire: 7.5})
 modularFrame = Material("Modular Frame", {reinforcedIronPlate: 1.5, screw: 28})
 smartPlating = Material("Smart Plating", {reinforcedIronPlate: 1, stator: 1})
 motor = Material("Motor", {rotor: 2, stator: 2})
@@ -87,6 +88,7 @@ material_dict = {
     "Steel Ingot": steelIngot,
     "Iron Rod": ironRod,
     "Wire": wire,
+    "Quickwire": quickwire,
     "Steel Beam": steelBeam,
     "Screw": screw,
     "Reinforced Iron Plate": reinforcedIronPlate,
