@@ -1,5 +1,5 @@
 import customtkinter as tk
-
+from PIL import Image
 from CTkMessagebox import CTkMessagebox
 import Material
 tk.set_appearance_mode("dark")
@@ -52,15 +52,23 @@ class GUI:
 
         # Add initial entries
         for i, item in enumerate(Material.material_list):
-            width = 160
+            factor = 1.5
+            width = 160 * factor
+            height = 30 * factor
+            rows = 8
             var = tk.StringVar()
+            image = tk.CTkImage(dark_image=Image.open(item.image_data), size=(height, height))
             menu = tk.CTkOptionMenu(root, variable=var, values=item.names, dropdown_hover_color="gray30",
                                     fg_color="DodgerBlue4", button_color="gray30", button_hover_color="gray60", width=width,
-                                  command=item_selected)
+                                  height=height,command=item_selected)
             menu.set(item.names[item.recipe])
             entry = tk.CTkEntry(root, width=width)
-            menu.grid(column=i//5, row=(i % 5)*2)
-            entry.grid(column=i//5, row=((i % 5)*2)+1)
+            menu.grid(column=i//rows, row=(i % rows)*2)
+            label = tk.CTkLabel(root, image=image, text="", )
+
+            #put the label on the manu and allign it to the right
+            label.grid(column=i//rows, row=(i % rows)*2, sticky="e", padx=width/5.5)
+            entry.grid(column=i//rows, row=((i % rows)*2)+1)
             entry_label_pairs.append((entry, menu))
 
 
