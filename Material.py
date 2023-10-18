@@ -93,7 +93,7 @@ stator = Material(["Stator", "Quickwire Stator"], [{steelPipe: 3, wire: 8}, {ste
 modularFrame = Material(["Modular Frame", "Bolted Frame"],
                         [{reinforcedIronPlate: 1.5, ironRod: 6}, {reinforcedIronPlate: 1.5, screw: 28}],
                         default_recipe=1)
-smartPlating = Material(["Smart Plating"], [{reinforcedIronPlate: 1, stator: 1}])
+smartPlating = Material(["Smart Plating"], [{reinforcedIronPlate: 1, rotor: 1}])
 motor = Material(["Motor"], [{rotor: 2, stator: 2}])
 automatedWiring = Material(["Automated Wiring"], [{stator: 1, cable: 20}])
 circuitBoard = Material(["Circuit Board"], [{copperSheet: 2, plastic: 4}])

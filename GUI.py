@@ -32,7 +32,7 @@ class GUI:
             if choice.get() == "Copy Results":
                 requested_items = "The requested items were:\n"
                 for material, requirement in sorted(data.items(),
-                                                    key=lambda x: Material.name_to_item_dict[x].complexity_rating):
+                                                    key=lambda x: Material.name_to_item_dict[x[0]][0].complexity_rating):
                     requested_items += material + ": " + "{:.2f}".format(requirement) + "\n"
                     root.clipboard_clear()
                     root.clipboard_append(requested_items + "\n" + msg)
@@ -65,9 +65,8 @@ class GUI:
             entry = tk.CTkEntry(root, width=width)
             menu.grid(column=i//rows, row=(i % rows)*2)
             label = tk.CTkLabel(root, image=image, text="", )
-
-            #put the label on the manu and allign it to the right
             label.grid(column=i//rows, row=(i % rows)*2, sticky="e", padx=width/5.5)
+
             entry.grid(column=i//rows, row=((i % rows)*2)+1)
             entry_label_pairs.append((entry, menu))
 
